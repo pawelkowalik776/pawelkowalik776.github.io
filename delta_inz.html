@@ -30,11 +30,16 @@
 						<header class="major">
 							<h2>Drukarka 3D o kinematyce równoległej</h2>
 						</header>
-						<p style="text-align: justify">Projekt ten był realizowany w ramach przedmiotu Projektowanie Mechatroniczne. Naszym zadaniem było zaprojektowanie drukarki w układzie delta. Moim zadaniem było zaprojektowanie modelu drukarki oraz, co za tym idzie, rozwiązań mechanicznych. 
-							Niewątpliwą zaletą tego projektu jest jego otwartość - jeśli konsument będzie chciał wymienić na przykład ekstruder, może to zrobić bez komplikacji. Konstrukcja drukarki jest klarowna, co pozwala na łatwą naprawę w wypadku ewentualnej awarii.
-						<p style="text-align: justify">Miałem przyjemność wraz z zespołem prezentować powyższy projekt na konferencji naukowej XX Warsztaty Projektowania Mechatronicznego pod Patronatem Dziekana Wydziału Inżynierii Mechanicznej i Robotyki dr hab. inż. Krzysztofa Mendroka.
-						Napisaliśmy również artykuł, który został wydany w książce podsumowującej konferencję.</p>
-						<p style="text-align: justify">Modele wyświetlacza LCD, Arduino Mega, krańcówek, mocowań Traxxas, koła zębatego GT2, łożysk oraz wentylatorów zostały pobrane ze stron open source lub z katalogów producenta. </p>
+						<p style="text-align: justify">Niniejszy projekt wykonywałem wraz z dwoma kolegami w ramach naszych prac inżynierskich. Wspólny projekt podzieliliśmy na trzy części - elektroniczną, software'ową oraz mechaniczną, za którą to odpowiadałem ja. Każdy z nas napisał prace 
+							inżynierską na temat odpowiadającej jego części. </p>
+						<p style="text-align: justify">Jak już wspomniałem, tematem mojej pracy inżynierskiej było zaprojektowanie konstrukcji oraz rozwiązań mechanicznych drukarki. Kluczowym aspektem, którym kierowałem się podczas projektowania była otwartość konstrukcji. Podczas przeglądu
+						rynku zauważyłem, że istnieje deficyt delt, które w prosty sposób umożliwiałyby ingerencję w strukturę mechaniczną, a co za tym idzie modyfikacje drukarki. Jeśli chodzi o drukarki kartezjańskie, to takich drukarek jest już znacznie więcej (przykładem może być drukarka
+						Creality Ender 3, którego sam posiadam i modyfikuję). W wyniku mojej pracy powstał prototyp drukarki o kinematyce równoległej, w której bez większych problemów można wymienić ekstruder, silniki czy nawet głowicę. Projekt wykorzystuje wiele elementów drukowanych, 
+						również mocowanie głowicy jest drukowane. Naturalną reakcją na tę informację jest wątpliwość, czy aby na pewno drukowanie mocowania głowicy, która nagrzewa się do temperatur powyżej 200 stopni Celsjusza, jest dobrym pomysłem, zważając na fakt, że przedmioty wytwarzane
+						w technologii druku 3D nie są zbyt odporne na temperaturę. Okazuje się, że... tak. Zastosowanie odpowiedniego chłodzenia (w naszym projekcie jest to wentylator 40x40), a także zaprojektowanie mocowania w sposób umożliwiający swobodny przepływ powietrza pozwala na bezproblemowe
+						działanie drukarki. Podobne rozwiązanie stosuje w swojej drukarce, która w ten sposób pracuje już ponad półtora roku. Także i w naszej delcie rozwiązanie to sprawuje się doskonale, co udało się potwierdzić dzięki prototypowi. Dzięki temu, że element jest drukowany i to w dodatku
+					z PLA, możliwa jest jego relatywnie prosta wymiana. Konsument musi jedynie zaprojektować mocowanie pod głowicę, której chce użyć, wydrukować ją oraz zamontować. Nie ma potrzeby kupowania żadnych mocowań ani zlecania frezowania elementu.</p>
+						<p style="text-align: justify">Modele wyświetlacza LCD, Arduino Mega, krańcówek, mocowań Traxxas, koła zębatego GT2, łożysk, wentylatorów oraz wszelkich elementów połączniowych zostały pobrane ze stron open source lub z katalogów producenta. </p>
 					</section>
 
 				<!-- Two -->
@@ -42,49 +47,55 @@
 						<h2>Zdjęcia:</h2>
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/delta1.jpg" class="image fit thumb"><img src="images/fulls/delta1.jpg" alt="" /></a>
+								<a href="images/fulls/delta_inz.jpg" class="image fit thumb"><img src="images/fulls/delta_inz.jpg" alt="" /></a>
 								<h3>Delta - widok ogólny</h3>
-								<p style="text-align: justify">Na powyższym renderze widać ogólny widok drukarki. Szpula z filamentem umieszczona jest obok drukarki, ponieważ jest to rozwiązanie najpraktyczniejsze ze względu na mechanikę i stabilność konstrukcji.</p>
+								<p style="text-align: justify">Na powyższym renderze widać ogólny widok drukarki. Szpula z filamentem umieszczona jest obok drukarki, ponieważ jest to rozwiązanie najpraktyczniejsze ze względu na mechanikę i stabilność konstrukcji.
+									Elementy złote z poprzedniej wersji - części drukowane - zostały w tym modelu zastąpione innymi kolorami, ze względu na materiał - biały to PLA, a niebieski to PET-G.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/delta3.jpg" class="image fit thumb"><img src="images/fulls/delta3.jpg" alt="" /></a>
-								<h3>Elementy drukowane</h3>
-								<p style="text-align: justify">Kolorem złotym zaznaczone są wszystkie elementy drukowane. Zaliczają się do nich m. in. mocowania profili oraz mocowanie hotendu. Druk 3D idealnie nadaje się do tego celu, ponieważ przy sprzedaży takiej drukarki można wysłać pliki w formacie stl do samodzielnego wydrukowania przez konsumenta, co znakomicie zmniejsza koszty przedsięwzięcia.</p>
+								<a href="images/fulls/prototyp1.jpg" class="image fit thumb"><img src="images/fulls/prototyp1.jpg" alt="" /></a>
+								<h3>Pierwsza wersja prototypu</h3>
+								<p style="text-align: justify">Na powyższym zdjęciu pokazana jest drukarka 3D od razu po złożeniu. Estetyka prototypu jest kwestią dyskusyjną, jednak należy zwrócić uwagę na fakt, że podczas drukowania ostatnich elementów do prototypu,
+									awarii uległa moja prywatna drukarka. W związku z tym niefortunnym wydarzeniem, zmuszeni byliśmy zastąpić drukowaną obudowę na elektronikę... kartonem.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/delta2.png" class="image fit thumb"><img src="images/fulls/delta2.png" alt="" /></a>
-								<h3>Widok z góry</h3>
-								<p style="text-align: justify">Powyżej znajduje się widok z góry. Widać na nim efektor drukarki, ekstruder, a także część okablowania.</p>
+								<a href="images/fulls/polerobocze2.png" class="image fit thumb"><img src="images/fulls/polerobocze2.png" alt="" /></a>
+								<h3>Pole robocze</h3>
+								<p style="text-align: justify">Główną zmianą w względem poprzedniej wersji jest pole robocze i ogólnie rozmiary drukarki. Planowo miał to być walec 210x260 mm, jednak po złożeniu prototypu, ze względu na połączenia Traxxas, okazało się, 
+									że efektor ma problemy z dosięgnięciem krawędzi pola roboczego w płaszczyźnie równoległej. Z tego powodu, dla bezpieczeństwa zmieniono wymiary pola roboczego na 180x290 mm.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/delta4.jpg" class="image fit thumb"><img src="images/fulls/delta4.jpg" alt="" /></a>
-								<h3>Drukarka częściowo złożona</h3>
-								<p style="text-align: justify">Drukarka jest bardzo prosta do złożenia. Większość połączeń realizowanych jest za pomocą śrub.</p>
+								<a href="images/fulls/czas.png" class="image fit thumb"><img src="images/fulls/czas.png" alt="" /></a>
+								<h3>Porównanie czasów druku</h3>
+								<p style="text-align: justify">Powyżej znajduje się zrzut ekranu z programu Cura. Przedstawia on przewidywane czasy druku dla drukarki kartezjańskiej (po lewej) oraz dla drukarki o kinematyce równoległej (po prawej). Jak można zauważyć, 
+									czasy druku na delcie są znacznie krótsze. W rzeczywistości również zaobserwowałem różnicę czasu  druku na korzyść delty.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/naped.jpg" class="image fit thumb"><img src="images/fulls/naped.jpg" alt="" /></a>
-								<h3>Napęd z silnika na kolumnę</h3>
-								<p style="text-align: justify">Naszą drukarkę napędzają 3 silniki krokowe, na których wał nałożone jest koło zębate GT2 o rozstawie zębów odpowiadająceym paskowi zębatemu. W górnej części drukarki znajduje się łożysko, które pozwala na swobodnych ruch.</p>
+								<a href="images/fulls/stol.png" class="image fit thumb"><img src="images/fulls/stol.png" alt="" /></a>
+								<h3>Stół drukarki</h3>
+								<p style="text-align: justify">Na samej górze stołu znajduje się szklany blat, którego zadaniem jest zapewnienie maksymalnie płaskiej powierzchni druku. Szkło z racji na swą sztywność, dobrze się do tego nadaje. Niżej znajduje się 
+									aluminiowa płyta grzewcza, która podrzewa szkło, co z kolei poprawia adhezję wydruków. Na samym dole znajduje się płyta wiórowa, która pełni rolę izolacji. Całość opiera się na poziomych profilach i zamocowana jest za pomocą specjalnych części przykręconych śrubami.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/efektor.png" class="image fit thumb"><img src="images/fulls/efektor.png" alt="" /></a>
-								<h3>Przełożenie napędu z kolumn na efektor</h3>
-								<p style="text-align: justify">Powyżej widać sposób przeniesienia napędu z kolumn drukarki (z prowadnic liniowych) na efektor. W tym celu użyto rurek z włókna węglowego oraz mocowań Traxxas.</p>
+								<a href="images/fulls/efektor_roz.png" class="image fit thumb"><img src="images/fulls/efektor_roz.png" alt="" /></a>
+								<h3>Widok rozstrzelony efektora</h3>
+								<p style="text-align: justify">Powyżej zaprezentowano widok rozstrzelony efektora. Jego konstrukcja zapewnia doskonałą sztywność. Głowica umieszczona w tym uchwycie jest znakomicie utwierdzona, nie ma żadnuch luzów. Zamocowana turbina 5015 zapewnia znakomite
+									 chłodzenie wydruku.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/delta5.png" class="image fit thumb"><img src="images/fulls/delta5.png" alt="" /></a>
-								<h3>Efektor - widok rozstrzelony</h3>
-								<p style="text-align: justify">Tak prezentuje się efektor drukarki. Jego elementy są podpisane na rysunku. Mocowania również wykonywane są w technologii druku 3D, ponieważ zamontowany wentylator pozwala na efektywne chłodzenie podzespołów. Można także zastosować materiał o wyższej odporności termicznej, ale nie jest to konieczne.</p>
+								<a href="images/fulls/benchy.jpeg" class="image fit thumb"><img src="images/fulls/benchy.jpeg" alt="" /></a>
+								<h3>Przykładowy wydruk - benchy</h3>
+								<p style="text-align: justify"></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/arduino1.png" class="image fit thumb"><img src="images/fulls/arduino1.png" alt="" /></a>
-								<h3>Mocowanie jednoski centralnej i prowadzenie przewodów.</h3>
-								<p style="text-align: justify">Drukarka została zaprojektowana z uwzględnieniem okablowania. Dzięki niektórym rozwiązaniom, przewody nie plątają się. Pomagają w tym wydrukowane klipsy (opcjonalnie można po także użyć trytytek). Przewody poprowadzone są do jednostki centralnej, gdzie podpięte są do arduino (niektóre bezpośrednio, a niektóre poprzez tranzystory ze względu na duży prąd).</p>
+								<a href="images/fulls/oslony.jpeg" class="image fit thumb"><img src="images/fulls/oslony.jpeg" alt="" /></a>
+								<h3>Przykładowy wydruk - osłony na przewody</h3>
+								<p style="text-align: justify"></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/ruch.gif" class="image fit thumb"><img src="images/fulls/ruch.gif" alt="" /></a>
-								<h3>Mocowanie jednoski centralnej i prowadzenie przewodów.</h3>
-								<p style="text-align: justify">Powyższa animacja pokazuje przykładową trajektorię wykonywaną przez efektor.</p>
+								<a href="images/fulls/pokaz.gif" class="image fit thumb"><img src="images/fulls/pokaz.gif" alt="" /></a>
+								<h3>Pokaz działania</h3>
+								<p style="text-align: justify">Na powyższym filmiku prototyp drukował model rakiety w trybie wazy</p>
 							</article>
 						</div>
 						<ul class="actions">
