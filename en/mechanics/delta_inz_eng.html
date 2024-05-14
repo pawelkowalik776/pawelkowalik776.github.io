@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Szarańcza nr 1</title>
+	<title>Delta - prototype</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -20,10 +20,10 @@
 		<div class="inner">
 			<a href="#" class="image avatar"><img src="../../images/foto.png" alt="" /></a>
 			<h1><strong>Paweł Kowalik</strong><br />
-				Portfolio projektów mechanicznych</h1>
-			<a href="/en/mechanics/locust.html">
+				Mechanical design portfolio</h1>
+			<a href="/pl/mechanika/delta_inz.html">
 				<img src="../../images/eng.jpg" alt="English" style="width:30px;height:20px;" />
-			</a>>
+			</a>
 		</div>
 	</header>
 
@@ -33,56 +33,152 @@
 		<!-- One -->
 		<section id="one">
 			<header class="major">
-				<h2>Korpus drona wchodzącego w projekt “Szarańcza AGH” - prototyp nr 1</h2>
+				<h2>3D printer with parallel kinematics</h2>
 			</header>
-			<p style="text-align: justify">Szarańcza AGH to jeden z projektów naszego koła naukowego. To chmara dronów
-				do szerokiego wachlarza zastosowań. Moim zadaniem było zaprojektowanie ramy. Projekt jest stylizowany na
-				szarańczę. Jest to jeden z pierwszych prototypów, gdyż projekt nadal jest rozwijany i, co za tym idzie,
-				nieustannie modyfikowany.
-				Śmigła zostały pobrane ze strony open source. Pozostałe elementy zaprojektowałem samodzielnie.
-			</p>
+			<p style="text-align: justify">I performed the present project together with two colleagues as part of our
+				engineering thesis. We divided the joint project into three parts - electronic, software and mechanical,
+				for which I was responsible. Each of us wrote an engineering paper on the corresponding part. </p>
+			<p style="text-align: justify">As I mentioned earlier, the topic of my engineering thesis was to design the
+				structure and mechanical solutions of the printer. The key aspect that guided me during the design
+				process
+				was the openness of the design. During my review of the market, I noticed that there was a shortage of
+				deltas that would easily
+				would make it possible to interfere with the mechanical structure and thus modify the printer. When it
+				comes to printers
+				Cartesian printers, there are already many more such printers (an example is the Creality Ender 3
+				printer, which I
+				I own and modify myself). The result of my work is a prototype printer with parallel kinematics, in
+				which without
+				major problems you can replace the extruder, motors or even the head. The project uses many printed
+				components,
+				also the head mount is printed. The natural reaction to this information is to doubt whether it is sure
+				to print the
+				head mount, which heats up to temperatures above 200 degrees Celsius, is a good idea, considering the
+				fact,
+				that 3D printed objects are not very heat-resistant. It turns out that... yes. The use of
+				appropriate cooling (in our project it is a 40x40 fan), as well as designing the mount in a way that
+				allows the
+				free flow of air allows the printer to operate without problems. He uses a similar solution in his
+				printer,
+				which has been working this way for more than a year and a half. In our delta, too, this solution works
+				perfectly, which we were able to
+				confirmed through the prototype. Thanks to the fact that the element is printed and in addition from
+				PLA, it is possible to replace it relatively
+				simple replacement. The consumer only needs to design the mount for the head he wants to use, print it
+				and mount it.
+				There is no need to buy any mounts or have the component milled.</p>
+			<p style="text-align: justify">Models of the LCD display, Arduino Mega, limiters, Traxxas mounts, GT2 gear,
+				bearings, fans,
+				and any connecting components were downloaded from open source sites or from the manufacturer's
+				catalogs. </p>
 		</section>
 
 		<!-- Two -->
 		<section id="two">
-			<h2>Zdjęcia:</h2>
+			<h2>Photos:</h2>
 			<div class="row">
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="../../images/fulls/szaranczanr1_1.jpg" class="image fit thumb"><img
-							src="../../images/fulls/szaranczanr1_1.jpg" alt="" /></a>
-					<h3>Szarańcza - widok ogólny</h3>
-					<p style="text-align: justify">Korpus został wyposażony w nóżki, które pozwalają na bezpieczny start
-						i lądowanie.</p>
+					<a href="../../images/fulls/delta_inz.jpg" class="image fit thumb"><img
+							src="../../images/fulls/delta_inz.jpg" alt="" /></a>
+					<h3>Delta - overall view </h3>
+					<p style="text-align: justify">The above render shows a general view of the printer. The spool of
+						filament is placed
+						is next to the printer, as this is the most practical solution due to the mechanics and
+						stability of the design.
+						The gold elements from the previous version - printed parts - have been replaced by other colors
+						in this model,
+						due to the material - white is PLA, and blue is PET-G.</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="../../images/fulls/szaranczanr1_2.jpg" class="image fit thumb"><img
-							src="../../images/fulls/szaranczanr1_2.jpg" alt="" /></a>
-					<h3>Szarańcza - widok z dołu</h3>
-					<p style="text-align: justify">Wszystkie komponenty drona (m. in. bateria i kontroler lotu) schowane
-						są w środku korpusu.</p>
+					<a href="../../images/fulls/prototyp1.jpg" class="image fit thumb"><img
+							src="../../images/fulls/prototyp1.jpg" alt="" /></a>
+					<h3>Prototype version 1</h3>
+					<p style="text-align: justify">The photo above shows the 3D printer as soon as it is assembled. The
+						aesthetics of the prototype
+						is a matter of debate, but it should be noted that while printing the last parts for the
+						prototype,
+						my personal printer malfunctioned. Due to this unfortunate event, we were forced to replace the
+						printed housing
+						for the electronics with... cardboard.</p>
 				</article>
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="../../images/fulls/szaranczanr1_3.jpg" class="image fit thumb"><img
-							src="../../images/fulls/szaranczanr1_3.jpg" alt="" /></a>
-					<h3>Widok gotowego drona</h3>
-					<p style="text-align: justify">Tak prezentuje się gotowy dron.</p>
+					<a href="../../images/fulls/polerobocze2.png" class="image fit thumb"><img
+							src="../../images/fulls/polerobocze2.png" alt="" /></a>
+					<h3>Printing area</h3>
+					<p style="text-align: justify">The main change from the previous version is the working field and
+						the size of the printer in general.
+						It was planned to be a 210x260 mm cylinder, but after assembling the prototype, due to Traxxas
+						connections, it turned out,
+						that the effector has problems reaching the edge of the working field in the parallel plane. For
+						this reason, the
+						safety, the dimensions of the working field were changed to 180x290 mm.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/czas.png" class="image fit thumb"><img src="../../images/fulls/czas.png"
+							alt="" /></a>
+					<h3>Printing time comparison</h3>
+					<p style="text-align: justify">Above is a screenshot from Cura. It shows the predicted printing
+						times
+						printing for a Cartesian printer (right) and for a printer with parallel kinematics (left). As
+						you can
+						can be seen, the printing times on the delta are significantly shorter. In fact, I also observed
+						a difference in printing time in favor of the delta.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/stol.png" class="image fit thumb"><img src="../../images/fulls/stol.png"
+							alt="" /></a>
+					<h3>Heat bed of the printer</h3>
+					<p style="text-align: justify">At the very top of the table is a glass top, which is designed to
+						provide a maximum
+						flat printing surface. Glass, because of its rigidity, is well suited for this purpose. Lower
+						down is an
+						aluminum heating plate, which heats the glass, which in turn improves adhesion of the prints. At
+						the very bottom is a chipboard,
+						which acts as insulation. The whole thing rests on horizontal profiles and is fixed with special
+						parts bolted together.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/efektor_roz.png" class="image fit thumb"><img
+							src="../../images/fulls/efektor_roz.png" alt="" /></a>
+					<h3>Effector - exploded view</h3>
+					<p style="text-align: justify">Shown above is a exploded view of the effector. Its design provides
+						excellent rigidity.
+						The head placed in this holder is superbly restrained, with no backlash. The attached 5015
+						turbine provides excellent
+						cooling of the print.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/benchy.jpeg" class="image fit thumb"><img
+							src="../../images/fulls/benchy.jpeg" alt="" /></a>
+					<h3>Sample 3D printed object - benchy</h3>
+					<p style="text-align: justify"></p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/oslony.jpeg" class="image fit thumb"><img
+							src="../../images/fulls/oslony.jpeg" alt="" /></a>
+					<h3>Sample 3D printed object - cable covers</h3>
+					<p style="text-align: justify"></p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/pokaz.gif" class="image fit thumb"><img
+							src="../../images/fulls/pokaz.gif" alt="" /></a>
+					<h3>Printing demonstration</h3>
+					<p style="text-align: justify">In the video above, the prototype was printing a model of the rocket
+						in vase mode</p>
 				</article>
 			</div>
-
 			<ul class="actions">
-				<li><a href="index_mechanika.html" class="button">Powrót do strony głównej projektów mechanicznych</a>
-				</li>
+				<li><a href="index_mechanics.html" class="button">Back to mechanical projects home page</a></li>
 			</ul>
 
 			<ul class="actions">
-				<li><a href="../../index.html" class="button">Powrót do strony głównej</a></li>
+				<li><a href="../index_en.html" class="button">Back to home page</a></li>
 			</ul>
-
 		</section>
 
 		<!-- Three -->
 		<section id="three">
-			<h2>Kontakt</h2>
+			<h2>Contact</h2>
 			<div class="row">
 				<div class="col-4 col-12-small">
 					<ul class="labeled-icons">
@@ -102,6 +198,7 @@
 				</div>
 			</div>
 		</section>
+
 
 		<!-- Four -->
 		<!--
@@ -426,12 +523,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="inner">
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/paweł-kowalik-7852061a3/" class="icon brands fa-linkedin"><span
-							class="label">LinkedIn</span></a></li>
-				<!--<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-			<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>-->
-			</ul>
 			<ul class="copyright">
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>

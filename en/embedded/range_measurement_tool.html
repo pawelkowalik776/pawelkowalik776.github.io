@@ -5,117 +5,139 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ultrasonic range measurement tool</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main1.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="../../images/foto.png" alt="" /></a>
-					<h1><strong>Paweł Kowalik</strong><br />
-						Portfolio of software projects</h1>
-						<a href="/pl/wbudowane/dalmierz.html">
-							<img src="../../images/pl.jpg" alt="English" style="width:30px;height:20px;"/>
-						</a>
-				</div>
+<head>
+	<title>Ultrasonic range measurement tool</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main1.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="../../images/foto.png" alt="" /></a>
+			<h1><strong>Paweł Kowalik</strong><br />
+				Portfolio of software projects</h1>
+			<a href="/pl/wbudowane/dalmierz.html">
+				<img src="../../images/pl.jpg" alt="English" style="width:30px;height:20px;" />
+			</a>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>Ultrasonic range measurement tool</h2>
 			</header>
+			<p style="text-align: justify">When calculating the result, the device takes into account the air
+				temperature, taking correction for the speed of
+				of sound. The data is displayed on an external display, and in addition
+				a change in distance is indicated by a change in the colors of the LEDs. Operation of the mentioned
+				components
+				is implemented fully in hardware, and the program works on interrupts and is ready for further
+				development.<br />
+				Components used: STM32L476RG-NUCLEO, HC-SR04 ultrasonic sensor, 2x temperature sensor (one at the sensor
+				and the other at the contact board
+				inside the red housing).
+				DS18B20, WS2812B digitally controlled diode ring, 1.8" TFT display with ST7735S controller and 74HCT125
+				chip.
+				For the text display, a function from <a
+					href="https://github.com/tuupola/hagl/blob/master/README.md">hagl library</a> has been used.<br />
+				In the case of such a project, the best way to demonstrate its performance is with a <a
+					href="https://youtu.be/jQgP0IpXHSw">video.</a>
+				The footage shows how the device reacts to an obstacle moving away from the sensor, and towards the end
+				shows the operation of a temperature
+				sensor placed on the ultrasonic sensor, which was heated with a finger.
+			</p>
+		</section>
 
-		<!-- Main -->
-			<div id="main">
+		<!-- Two -->
+		<section id="two">
+			<h2>Photos:</h2>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" alt="" /></a>
+					<h3>Short range</h3>
+					<p style="text-align: justify">In the photo above, the sensor has been positioned to hit the phone.
+						You can read the measured distance on the screen, plus the red glowing LEDs indicate the short
+						distance.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" alt="" /></a>
+					<h3>Long range</h3>
+					<p style="text-align: justify">In the picture above, the sensor was moved so that it hit the
+						ceiling.
+						The distance on the screen increased and the LEDs turned green.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" alt="" /></a>
+					<h3>A word about electronics</h3>
+					<p style="text-align: justify">While the electronic connections are relatively simple, the 74HCT125
+						chip is worth mentioning.
+						The WS2812B diodes require a minimum of 3.5V for the high state, and the microcontroller used
+						allows a maximum of 3.3V to be exposed to the GPIO. To solve
+						this problem, the 74HCT125 chip was reached, containing digital buffers. The chip transfers the
+						input state to the output. It is powered
+						from 5V, and the input voltage of 2V, the circuit treats as a high state.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz4.png" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz4.png" alt="" /></a>
+					<h3>Interruption-based program</h3>
+					<p style="text-align: justify">The program is written so that the handling of all components takes
+						place in interrupts.
+						The progam does not use the busy-waiting method; instead, the microcontroller processor is ready
+						for operation all the time.
+						The project is ready to be expanded with possible additional components or functionality such as
+						power saving by
+						putting the microcontroller to sleep between measurement readings and display updates.</p>
+				</article>
+			</div>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Ultrasonic range measurement tool</h2>
-						</header>
-						<p style="text-align: justify">When calculating the result, the device takes into account the air temperature, taking correction for the speed of
-							of sound. The data is displayed on an external display, and in addition
-							a change in distance is indicated by a change in the colors of the LEDs. Operation of the mentioned components
-							is implemented fully in hardware, and the program works on interrupts and is ready for further development.<br/>
-							Components used: STM32L476RG-NUCLEO, HC-SR04 ultrasonic sensor, 2x temperature sensor (one at the sensor and the other at the contact board
-							inside the red housing).
-							DS18B20, WS2812B digitally controlled diode ring, 1.8" TFT display with ST7735S controller and 74HCT125 chip. 
-							For the text display, a function from  <a href="https://github.com/tuupola/hagl/blob/master/README.md">hagl library</a> has been used.<br/>
-							In the case of such a project, the best way to demonstrate its performance is with a <a href="https://youtu.be/jQgP0IpXHSw">video.</a>
-							The footage shows how the device reacts to an obstacle moving away from the sensor, and towards the end shows the operation of a temperature
-							sensor placed on the ultrasonic sensor, which was heated with a finger.
-							</p>
-					</section>
+			<ul class="actions">
+				<li><a href="index_embedded.html" class="button">Back to home page of software projects</a></li>
+			</ul>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Photos:</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" alt="" /></a>
-								<h3>Short range</h3>
-								<p style="text-align: justify">In the photo above, the sensor has been positioned to hit the phone.
-									You can read the measured distance on the screen, plus the red glowing LEDs indicate the short distance.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" alt="" /></a>
-								<h3>Long range</h3>
-								<p style="text-align: justify">In the picture above, the sensor was moved so that it hit the ceiling.
-									The distance on the screen increased and the LEDs turned green.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" alt="" /></a>
-								<h3>A word about electronics</h3>
-								<p style="text-align: justify">While the electronic connections are relatively simple, the 74HCT125 chip is worth mentioning.
-									The WS2812B diodes require a minimum of 3.5V for the high state, and the microcontroller used allows a maximum of 3.3V to be exposed to the GPIO. To solve
-								this problem, the 74HCT125 chip was reached, containing digital buffers. The chip transfers the input state to the output. It is powered
-							from 5V, and the input voltage of 2V, the circuit treats as a high state.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz4.png" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz4.png" alt="" /></a>
-								<h3>Interruption-based program</h3>
-								<p style="text-align: justify">The program is written so that the handling of all components takes place in interrupts.
-									The progam does not use the busy-waiting method; instead, the microcontroller processor is ready for operation all the time.
-								The project is ready to be expanded with possible additional components or functionality such as power saving by
-							putting the microcontroller to sleep between measurement readings and display updates.</p>
-							</article>
-						</div>
-						
-						<ul class="actions">
-							<li><a href="index_embedded.html" class="button">Back to home page of software projects</a></li>
-						</ul>
+			<ul class="actions">
+				<li><a href="../index_en.html" class="button">Back to home page</a></li>
+			</ul>
 
-						<ul class="actions">
-							<li><a href="../index_en.html" class="button">Back to home page</a></li>
-						</ul>
+		</section>
 
-					</section>
+		<!-- Three -->
+		<section id="three">
+			<h2>Contact</h2>
+			<div class="row">
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+							788 842 960
+						</li>
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="#">pawel.kowalik776@gmail.com</a>
+						</li>
+						<li>
+							<h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+							<a href="https://www.linkedin.com/in/p-kowalik/">LinkedIn</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-								<!-- Three -->
-								<section id="three">
-									<h2>Contact</h2>
-									<div class="row">
-										<div class="col-4 col-12-small">
-											<ul class="labeled-icons">
-												<li>
-													<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-													788 842 960
-												</li>
-												<li>
-													<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-													<a href="#">pawel.kowalik776@gmail.com</a>
-												</li>
-												<li>
-													<h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-													<a href="https://www.linkedin.com/in/p-kowalik/">LinkedIn</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</section>
-
-				<!-- Four -->
-				<!--
+		<!-- Four -->
+		<!--
 					<section id="four">
 						<h2>Elements</h2>
 
@@ -432,23 +454,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 				-->
 
-			</div>
-<!-- Footer -->
-<footer id="footer">
-	<div class="inner">
-		<ul class="copyright">
-			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-		</ul>
 	</div>
-</footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
 
-<!-- Scripts -->
-<script src="../../assets/js/jquery.min.js"></script>
-<script src="../../assets/js/jquery.poptrox.min.js"></script>
-<script src="../../assets/js/browser.min.js"></script>
-<script src="../../assets/js/breakpoints.min.js"></script>
-<script src="../../assets/js/util.js"></script>
-<script src="../../assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.poptrox.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
 
 </body>
+
 </html>

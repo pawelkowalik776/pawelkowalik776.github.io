@@ -5,117 +5,139 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ultradźwiękowy dalmierz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main1.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="../../images/foto.png" alt="" /></a>
-					<h1><strong>Paweł Kowalik</strong><br />
-						Portfolio projektów programistycznych</h1>
-						<a href="/en/embedded/range_measurement_tool.html">
-							<img src="../../images/eng.jpg" alt="English" style="width:30px;height:20px;"/>
-						</a>
-				</div>
+<head>
+	<title>Ultradźwiękowy dalmierz</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../../assets/css/main1.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="../../images/foto.png" alt="" /></a>
+			<h1><strong>Paweł Kowalik</strong><br />
+				Portfolio projektów programistycznych</h1>
+			<a href="/en/embedded/range_measurement_tool.html">
+				<img src="../../images/eng.jpg" alt="English" style="width:30px;height:20px;" />
+			</a>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>Ultradźwiękowy dalmierz</h2>
 			</header>
+			<p style="text-align: justify">Urządzenie przy kalkulacji wyniku bierze pod uwagę temperaturę powietrza,
+				uzwględniając prędkość
+				dźwięku. Dane wyświetlane są na zewnętrznym wyświetlaczu, a dodatkowo
+				zmiana odległości sygnalizowana jest zmianą kolorów diod. Obsługa wspomnianych komponentów
+				realizowana jest w pełni sprzętowo, a program działa na przerwaniach i jest gotowy do dalszej
+				rozbudowy.<br />
+				Wykorzystane komponenty: STM32L476RG-NUCLEO, czujnik ultradźwiękowy HC-SR04, 2x czujnik temperatury
+				(jeden przy czujniku, a drugi przy płytce stykowej
+				wewnątrz czerwonej obudowy).
+				DS18B20, pierścień diod sterowanych cyfrowo WS2812B, wyświetlacz TFT 1.8" ze sterownikiem ST7735S oraz
+				układ 74HCT125.
+				Do wyświetlania tekstu użyto funkcji z <a
+					href="https://github.com/tuupola/hagl/blob/master/README.md">biblioteki hagl.</a><br />
+				W przypadku takiego projektu najlepiej zaprezentować jego działanie za pomocą <a
+					href="https://youtu.be/jQgP0IpXHSw">filmu.</a>
+				Na nagraniu pokazano jak urządzenie reaguje na oddalającą się od czujnika przeszkodę, a pod koniec
+				pokazano działanie czujnika
+				temperatury umieszczonego na czujniku, którego ogrzano palcem.
+			</p>
+		</section>
 
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Ultradźwiękowy dalmierz</h2>
-						</header>
-						<p style="text-align: justify">Urządzenie przy kalkulacji wyniku bierze pod wagę temperaturę powietrza, biorąc poprawkę na prędkość
-							dźwięku. Dane wyświetlane są na zewnętrznym wyświetlaczu, a dodatkowo
-							zmiana odległości sygnalizowana jest zmianą kolorów diod. Obsługa wspomnianych komponentów
-							realizowana jest w pełni sprzętowo, a program działa na przerwaniach i jest gotowy do dalszej rozbudowy.<br/>
-							Wykorzystane komponenty: STM32L476RG-NUCLEO, czujnik ultradźwiękowy HC-SR04, 2x czujnik temperatury (jeden przy czujniku, a drugi przy płytce stykowej
-							wewnątrz czerwonej obudowy).
-							DS18B20, pierścień diod sterowanych cyfrowo WS2812B, wyświetlacz TFT 1.8" ze sterownikiem ST7735S oraz układ 74HCT125. 
-							Do wyświetlania tekstu użyto funkcji z  <a href="https://github.com/tuupola/hagl/blob/master/README.md">biblioteki hagl.</a><br/>
-							W przypadku takiego projektu najlepiej zaprezentować jego działanie za pomocą <a href="https://youtu.be/jQgP0IpXHSw">filmu.</a>
-							Na nagraniu pokazano jak urządzenie reaguje na oddalającą się od czujnika przeszkodę, a pod koniec pokazano działanie czujnika
-							temperatury umieszczonego na czujniku, którego ogrzano palcem.
-							</p>
-					</section>
-
-				<!-- Two -->
-					<section id="two">
-						<h2>Zdjęcia:</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" alt="" /></a>
-								<h3>Krótki dystans</h3>
-								<p style="text-align: justify">Na powyższym zdjęcoi czujnik został ustawiony tak, aby trafiał w telefon.
-								Na ekranie można odczytać zmierzoną odległość, a ponadto świecące na czerwono diody informują o krótkim dystansie.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" alt="" /></a>
-								<h3>Długi dystans</h3>
-								<p style="text-align: justify">Na powyższym zdjeciu czujnik przesunięto tak, by trafiał w sufit.
-								Dystans na ekranie zwiększył się, a diody zmieniły kolor na zielony.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" alt="" /></a>
-								<h3>Słowo o elektronice</h3>
-								<p style="text-align: justify">Połączenia elektroniczne są stosunkowo proste, natomiast warto wspomnieć o układzie 74HCT125.
-								Diody WS2812B do stanu wysokiego wymagają minimum 3.5V, a użyty mikrokontroler umożliwia wystawienie maksymalnie 3.3V na GPIO. By rozwiązać
-							ten problem sięgnięto po układ 74HCT125, zawierający bufory cyfrowe. Układ przekazuje stan wejścia na wyjście. Zasilany jest
+		<!-- Two -->
+		<section id="two">
+			<h2>Zdjęcia:</h2>
+			<div class="row">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz1.jpg" alt="" /></a>
+					<h3>Krótki dystans</h3>
+					<p style="text-align: justify">Na powyższym zdjęcoi czujnik został ustawiony tak, aby trafiał w
+						telefon.
+						Na ekranie można odczytać zmierzoną odległość, a ponadto świecące na czerwono diody informują o
+						krótkim dystansie.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz2.jpg" alt="" /></a>
+					<h3>Długi dystans</h3>
+					<p style="text-align: justify">Na powyższym zdjeciu czujnik przesunięto tak, by trafiał w sufit.
+						Dystans na ekranie zwiększył się, a diody zmieniły kolor na zielony.</p>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz3.jpg" alt="" /></a>
+					<h3>Słowo o elektronice</h3>
+					<p style="text-align: justify">Połączenia elektroniczne są stosunkowo proste, natomiast warto
+						wspomnieć o układzie 74HCT125.
+						Diody WS2812B do stanu wysokiego wymagają minimum 3.5V, a użyty mikrokontroler umożliwia
+						wystawienie maksymalnie 3.3V na GPIO. By rozwiązać
+						ten problem, sięgnięto po układ 74HCT125, zawierający bufory cyfrowe. Układ przekazuje stan
+						wejścia na wyjście. Zasilany jest
 						z 5V, a napięcie na wejściu o wartości 2V, układ traktuje jako stan wysoki.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="../../images/fulls/embedded/dalmierz/dalmierz4.png" class="image fit thumb"><img src="../../images/fulls/embedded/dalmierz/dalmierz4.png" alt="" /></a>
-								<h3>Program oparty na przerwaniach</h3>
-								<p style="text-align: justify">Program napisany jest tak, że obsługa wszystkich komponentów ma miejsce w przerwaniach.
-								W progamie nie stosowana jest metoda "busy-waiting", zamiast tego procesor mikrokontrolera jest cały czas gotowy do działania.
-							Projekt jest gotowy do rozbudowy o ewentualne kolejne komponenty lub funkcjonalności jak np. oszczędzanie energii poprzez
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="../../images/fulls/embedded/dalmierz/dalmierz4.png" class="image fit thumb"><img
+							src="../../images/fulls/embedded/dalmierz/dalmierz4.png" alt="" /></a>
+					<h3>Program oparty na przerwaniach</h3>
+					<p style="text-align: justify">Program napisany jest tak, że obsługa wszystkich komponentów ma
+						miejsce w przerwaniach.
+						W progamie nie stosowana jest metoda "busy-waiting", zamiast tego procesor mikrokontrolera jest
+						cały czas gotowy do działania.
+						Projekt jest gotowy do rozbudowy o ewentualne kolejne komponenty lub funkcjonalności, jak np.
+						oszczędzanie energii poprzez
 						usypianie mikrokontrolera pomiędzy odczytem pomiarów i aktualizacjami wyświetlacza.</p>
-							</article>
-						</div>
-						
-						<ul class="actions">
-							<li><a href="index_wbudowane.html" class="button">Powrót do strony głównej projektów programistycznych</a></li>
-						</ul>
+				</article>
+			</div>
 
-						<ul class="actions">
-							<li><a href="../index.html" class="button">Powrót do strony głównej</a></li>
-						</ul>
+			<ul class="actions">
+				<li><a href="index_wbudowane.html" class="button">Powrót do strony głównej projektów
+						programistycznych</a></li>
+			</ul>
 
-					</section>
+			<ul class="actions">
+				<li><a href="../index.html" class="button">Powrót do strony głównej</a></li>
+			</ul>
 
-								<!-- Three -->
-								<section id="three">
-									<h2>Kontakt</h2>
-									<div class="row">
-										<div class="col-4 col-12-small">
-											<ul class="labeled-icons">
-												<li>
-													<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-													788 842 960
-												</li>
-												<li>
-													<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-													<a href="#">pawel.kowalik776@gmail.com</a>
-												</li>
-												<li>
-													<h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-													<a href="https://www.linkedin.com/in/p-kowalik/">LinkedIn</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</section>
+		</section>
 
-				<!-- Four -->
-				<!--
+		<!-- Three -->
+		<section id="three">
+			<h2>Kontakt</h2>
+			<div class="row">
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+							788 842 960
+						</li>
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="#">pawel.kowalik776@gmail.com</a>
+						</li>
+						<li>
+							<h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+							<a href="https://www.linkedin.com/in/p-kowalik/">LinkedIn</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Four -->
+		<!--
 					<section id="four">
 						<h2>Elements</h2>
 
@@ -432,23 +454,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</section>
 				-->
 
-			</div>
-<!-- Footer -->
-<footer id="footer">
-	<div class="inner">
-		<ul class="copyright">
-			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-		</ul>
 	</div>
-</footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="copyright">
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
 
-<!-- Scripts -->
-<script src="../../assets/js/jquery.min.js"></script>
-<script src="../../assets/js/jquery.poptrox.min.js"></script>
-<script src="../../assets/js/browser.min.js"></script>
-<script src="../../assets/js/breakpoints.min.js"></script>
-<script src="../../assets/js/util.js"></script>
-<script src="../../assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/jquery.poptrox.min.js"></script>
+	<script src="../../assets/js/browser.min.js"></script>
+	<script src="../../assets/js/breakpoints.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<script src="../../assets/js/main.js"></script>
 
 </body>
+
 </html>
